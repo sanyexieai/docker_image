@@ -390,7 +390,10 @@ if __name__ == "__main__":
         output_filename = f"Industry_Research_Report.md"
         #copy to reports
         os.makedirs("reports", exist_ok=True)
-        shutil.copy(output_filename, f"reports/Industry_Research_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+        try:
+            shutil.copy(output_filename, f"reports/Industry_Research_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+        except Exception as e:
+            logger.error(f"❌ 复制文件失败: {e}")
         # 删除原始文件
         if os.path.exists(output_filename):
             os.remove(output_filename)

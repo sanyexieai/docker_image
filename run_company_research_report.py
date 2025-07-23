@@ -581,7 +581,10 @@ class ReportGenerationPipeline:
 
             #copy to reports
             os.makedirs("reports", exist_ok=True)
-            shutil.copy(output_file, f"reports/Company_Research_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+            try:
+                shutil.copy(output_file, f"reports/Company_Research_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+            except Exception as e:
+                print(f"[警告] 复制文件失败: {e}")
             # 删除原始文件
             if os.path.exists(output_file):
                 os.remove(output_file)

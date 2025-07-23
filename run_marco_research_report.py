@@ -630,7 +630,10 @@ class ReportCompleter(Node):
         md_file = "Macro_Research_Report.md"
         #copy to reports
         os.makedirs("reports", exist_ok=True)
-        shutil.copy(md_file, f"reports/Macro_Research_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+        try:
+            shutil.copy(md_file, f"reports/Macro_Research_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md")
+        except Exception as e:
+            print(f"[警告] 复制文件失败: {e}")
         # 删除原始文件
         if os.path.exists(md_file):
             os.remove(md_file)
