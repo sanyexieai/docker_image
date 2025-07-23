@@ -17,7 +17,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from urllib.parse import urlparse
 
-from utils.markdown_tools import convert_to_docx, format_markdown
+from app.utils.markdown_tools import convert_to_docx, format_markdown
 
 class DocumentConversionPipeline:
     """文档格式转换流程类"""
