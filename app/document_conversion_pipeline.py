@@ -196,7 +196,7 @@ class DocumentConversionPipeline:
             self.logger.error(f"❌ Word文档转换失败: {e}")
             return None
     
-    def process_markdown_file(self, md_path):
+    def process_markdown_file(self, md_path,word_output_path=None):
         """处理单个markdown文件"""
         self.logger.info(f"📁 处理markdown文件: {md_path}")
         
@@ -214,7 +214,7 @@ class DocumentConversionPipeline:
             self.format_markdown(processed_md_path)
             
             # 3. 转换为Word文档
-            docx_path = self.convert_to_word(processed_md_path)
+            docx_path = self.convert_to_word(processed_md_path,word_output_path)
             
             return {
                 'original_md': md_path,
@@ -237,7 +237,7 @@ class DocumentConversionPipeline:
         files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
         return files[0]
     
-    def run_conversion(self, md_path=None):
+    def run_conversion(self, md_path=None,word_output_path=None):
         """运行文档转换流程"""
         self.logger.info("\n" + "="*80)
         self.logger.info("🚀 开始文档格式转换流程")
@@ -253,7 +253,7 @@ class DocumentConversionPipeline:
                 self.logger.info(f"📁 自动选择文件: {md_path}")
             
             # 处理markdown文件
-            result = self.process_markdown_file(md_path)
+            result = self.process_markdown_file(md_path,word_output_path)
             
             if result:
                 self.logger.info("\n✅ 文档转换流程完成！")

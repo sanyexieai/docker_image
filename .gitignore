@@ -1,1 +1,13 @@
 .env
+logs/*
+search_cache/*
+reports/*
+Industry_Research_Report_images.md
+Industry_Research_Report.docx
+Industry_Research_Report.md
+Macro_Research_Report_images.md
+Macro_Research_Report.md
+Macro_Research_Report.docx
+Company_Research_Report_images.md
+Company_Research_Report.md
+Company_Research_Report.docx

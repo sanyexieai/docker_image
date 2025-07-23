@@ -407,7 +407,7 @@ if __name__ == "__main__":
         pipeline = DocumentConversionPipeline()
         
         # 运行文档转换流程
-        result = pipeline.run_conversion(output_filename)
+        result = pipeline.run_conversion(output_filename,f"Industry_Research_Report.docx")
         logger.info(f"\n✅ 行业研报生成完成！")
         logger.info(f"📁 输出文件: {output_filename}")
     else:

@@ -651,7 +651,7 @@ class ReportCompleter(Node):
         pipeline = DocumentConversionPipeline()
         
         # 运行文档转换流程
-        result = pipeline.run_conversion(md_file)
+        result = pipeline.run_conversion(md_file,f"Macro_Research_Report.docx")
         return "report_saved"
 
 

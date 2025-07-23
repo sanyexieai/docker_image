@@ -598,7 +598,7 @@ class ReportGenerationPipeline:
             pipeline = DocumentConversionPipeline()
             
             # 运行文档转换流程
-            result = pipeline.run_conversion(output_file)
+            result = pipeline.run_conversion(output_file,f"Company_Research_Report.docx")
             # convert_md_to_docx_pure_python(output_file)
 
 
