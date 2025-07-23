@@ -1,0 +1,15 @@
+2025-07-23 23:44:28,056 - ReportGeneration_2053009223792 - INFO - 📝 日志记录已启动，日志文件: logs\report_generation_20250723_234428.log
+2025-07-23 23:44:28,059 - ReportGeneration_2053009223792 - INFO - 
+================================================================================
+2025-07-23 23:44:28,059 - ReportGeneration_2053009223792 - INFO - 🚀 开始研报生成流程
+2025-07-23 23:44:28,059 - ReportGeneration_2053009223792 - INFO - ================================================================================
+2025-07-23 23:44:28,079 - ReportGeneration_2053009223792 - INFO - 🔧 LLM初始化成功，使用模型: deepseek-chat
+2025-07-23 23:44:28,079 - ReportGeneration_2053009223792 - WARNING - 模型 deepseek-chat 不被 tiktoken 支持，使用默认编码 cl100k_base
+2025-07-23 23:44:28,168 - ReportGeneration_2053009223792 - WARNING - 模型 deepseek-chat 不被 tiktoken 支持，使用默认编码 cl100k_base
+2025-07-23 23:44:28,168 - ReportGeneration_2053009223792 - WARNING - 模型 deepseek-chat 不被 tiktoken 支持，使用默认编码 cl100k_base
+2025-07-23 23:44:28,168 - ReportGeneration_2053009223792 - WARNING - 模型 deepseek-chat 不被 tiktoken 支持，使用默认编码 cl100k_base
+2025-07-23 23:44:28,168 - ReportGeneration_2053009223792 - WARNING - 模型 deepseek-chat 不被 tiktoken 支持，使用默认编码 cl100k_base
+2025-07-23 23:44:28,168 - ReportGeneration_2053009223792 - INFO - ✅ 所有代理初始化成功
+2025-07-23 23:44:28,168 - ReportGeneration_2053009223792 - INFO - 🔗 初始化PostgreSQL RAG助手...
+2025-07-23 23:44:38,826 - ReportGeneration_2053009223792 - ERROR - ❌ PostgreSQL RAG助手初始化失败: Torch not compiled with CUDA enabled
+2025-07-23 23:44:38,826 - ReportGeneration_2053009223792 - ERROR - ❌ 研报生成失败: Torch not compiled with CUDA enabled

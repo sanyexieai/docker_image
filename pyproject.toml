@@ -1,0 +1,60 @@
+[project]
+name = "docker_image"
+version = "0.1.0"
+description = "智能体赋能的金融多模态报告自动化生成"
+authors = [
+    { name = "seven" }
+]
+
+dependencies = [
+    # playhouse
+    "playhouse>=0.0.1",
+    # ========== 核心依赖 ==========
+    # 环境配置
+    "python-dotenv>=1.0.0",
+    # 数据分析核心库
+    "pandas>=2.0.0",
+    "numpy>=1.21.0",
+    # ========== 数据可视化 ==========
+    "matplotlib>=3.5.0",
+    "seaborn>=0.12.0",
+    "pillow>=8.0.0",
+    # ========== AI大模型 ==========
+    "openai>=1.0.0",
+    # ========== 网络请求与数据采集 ==========
+    "requests>=2.25.0",
+    "aiofiles>=23.1.0",
+    "k-sogou-search",
+    # ========== 网页解析与搜索 ==========
+    "beautifulsoup4>=4.9.0",
+    "lxml>=4.6.0",
+    "duckduckgo-search>=3.0.0",
+    # ========== 金融数据接口 ==========
+    "akshare>=1.12.0",
+    "efinance>=0.5.0",
+    # ========== 数据处理与分析 ==========
+    "duckdb>=0.8.0",
+    # ========== 文档处理 ==========
+    "pyyaml>=6.0",
+    "markdown>=3.4.0",
+    "python-docx>=0.8.11",
+    "mdformat~=0.7.22",
+    # ========== Jupyter Notebook支持 ==========
+    "ipython>=7.0.0",
+    # ========== 开发工具（可选） ==========
+    "loguru~=0.7.3",
+    "tiktoken",
+    "tenacity",
+    "psycopg2",
+    "sentence_transformers",
+    "pgvector",
+    "pypandoc",
+    "ddgs"
+]
+requires-python = ">=3.10,<3.11"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+bump = true
+fallback-version = "0.0.0"
